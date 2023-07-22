@@ -1,61 +1,43 @@
-<!DOCTYPEW HTML>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Sayed Careers</title>
-    <style>
-      h1{
-        font-size:50px;
-        font-family:Robotto;
-        font-weight:normal;
-        color: rgb(100, 100, 100);
-        text-align:center
-      }
-      h2{
-        font-size:40px;
-        font-family:Robotto;
-        font-weight:normal;
-        color: rgb(100, 100, 100);
-        text-align:center
-      }
-       .main{
-        font-size:40px;
-        font-family:Robotto;
-        font-weight:normal;
-        color: rgb(80,80,80);
-        text-align:center
-      }
-      #banner
-      {
-        height:320px;
-        width:100%;
-        object-fit:cover
-      }
-      #container{
-        max-width:1000px;
-        margin:0 auto
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Jobs</title>
+    
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+  h1{
+    text-align:center;
+    color: rgb(100, 100, 100);;
+    margin: 10 auto;
+  }
+  #banner{
+    width: 100%;
+    height: 320px;
+  }
+</style>
   </head>
-  <body>
-    <div id=container>
-    <h1>Sayed Careers</h1>
-        <img id="banner" src="https://sayed-careers-website--sayedhussein1.repl.co/static/careerbanner.jpg" >
-   <h2>About Sayed</h2>
-<p class="main">
-  Career websites can provide you with information about different careers, including job descriptions, salary ranges, and required skills and experience.
-Career websites can help you find job openings that are a good fit for your skills and interests.
-Career websites can provide you with career resources, such as resume and cover letter writing tips, interview advice, and salary negotiation tips.
-
-</p>
-<h2>Open Positions</h2>    
-    <h6>Job 1 to do here</h6> 
-    <button>Apply</button>
-  <div style="text-align:center">
-  <h2>Contact us</h2>
-    <button>Contact us</button>
-    <p>Copyright Sayed Careers, 2023</p>
-  </div>
+  <body >
+    <div class="container">
+    <h1>Tech Jobs</h1>
+    <img class="img-fluid" id="banner" src="https://sayed-careers-website--sayedhussein1.repl.co/static/careerbanner.jpg">
+    <h1>About Tech Jobs </h1>
+    <p class="lead">
+      tech jobs is platform for providing real lstest updates opprtunities for IT sectors.
+    </p>
+       <h1>Open Jobs in {{company_name}} </h1>
+      <div>
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
       </div>
+      <div class="text-center">
+    <button class="btn btn-primary">Contact Us</button>
+      <p>copyright, 2023</p>
+      </div>
+</div>
+
 
   </body>
 </html>
