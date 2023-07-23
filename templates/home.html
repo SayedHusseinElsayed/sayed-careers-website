@@ -19,25 +19,27 @@
 </style>
   </head>
   <body >
+    {% include 'nav.html' %}
     <div class="container">
     <h1>Tech Jobs</h1>
     <img class="img-fluid" id="banner" src="https://sayed-careers-website--sayedhussein1.repl.co/static/careerbanner.jpg">
     <h1>About Tech Jobs </h1>
     <p class="lead">
-      tech jobs is platform for providing real lstest updates opprtunities for IT sectors.
+   <h1 class="main-title">Find the Best Jobs in Tech Jobs</h1>
+   <P class="sub-title">
+	    		Searching for vacancies &amp; career opportunities? Tech Jobs helps you in your job search in Egypt</P>
     </p>
-       <h1>Open Jobs in {{company_name}} </h1>
+       <h4>Avaiable Jobs in {{company_name}} </h4>
       <div>
         {% for job in jobs %}
         {% include 'jobitem.html' %}
         {% endfor %}
       </div>
-      <div class="text-center">
-    <button class="btn btn-primary">Contact Us</button>
+      <div class="text-center" style="margin-top:20px">
+    <a href="mailto:sayed.hussein.elsayed@gmail.com?subject=Contact%20Message&body=Add%20your%20messgage%20below%3A%0D%0A%0D%0A%0D%0A" type="button" class="btn btn-primary">Contact Us</a>
       <p>copyright, 2023</p>
       </div>
 </div>
-
 
   </body>
 </html>
